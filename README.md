@@ -1,11 +1,16 @@
 # tag-group-collapse
 
-I use the Chrome tab group feature all the time, it allow me to better organize the open tabs.
+I use the Chrome tab group feature all the time, it allows me to better organize my open tabs.
 
 When i need to go to a specific tab, i just search for it, and i am automatically taken to the 
-tab i searched for, but if i jumped from a different group i will end up with two open group tabs.
+tab i searched for. However, if i jumped from a different group, i will end up with two open group tabs.
+
 It would be useful to have a shortcut to collapse all the groups that are not currently in focus.
 
-That's what this extension is intent to do!
+This extension adds the ability to use these shortcuts:
 
-An Chrome extension to allow the collapse of all groups that are not currently in focus
+| Shortcut | Description |
+| ---------| ------------|
+| Alt+Shift+Up | Collapse all tab groups except the active one | 
+| Alt+Shift+Down | Collapse all tab groups, or if all groups are collapsed, expand the one with the active tab | 
+

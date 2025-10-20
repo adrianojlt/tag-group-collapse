@@ -20,8 +20,17 @@ chrome.commands.onCommand.addListener(async (command) => {
 
     case "collapse_all_groups":
 
-      for (const group of groups) {
-        await chrome.tabGroups.update(group.id, { collapsed: true });
+     const anyExpanded = groups.some(group => !group.collapsed);
+
+      if (anyExpanded) {
+        for (const group of groups) {
+          await chrome.tabGroups.update(group.id, { collapsed: true });
+        }
+      } else {
+        // if All is collapsed then expand the active tab's group (if any)
+        if (activeTab.groupId && activeTab.groupId !== chrome.tabGroups.TAB_GROUP_ID_NONE) {
+          await chrome.tabGroups.update(activeTab.groupId, { collapsed: false });
+        }
       }
 
       break;
