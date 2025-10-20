@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Collapse Other Tab Groups",
+  "name": "Collapse Tab Groups",
   "version": "1.0",
-  "description": "Collapse all tab groups except the one currently in focus.",
+  "description": "Collapse Tab Groups",
   "permissions": ["tabGroups", "tabs"],
   "icons": {
     "16": "16.png",
@@ -27,6 +27,6 @@
     }
   },
   "action": {
-    "default_title": "Collapse Other Groups"
+    "default_title": "Collapse Tab Groups"
   }
 }
